@@ -5,6 +5,7 @@ def char_counts(textfilename):
         result[ord(symbol)] += 1
     return result
 
+
 if __name__ == '__main__':
 
     filename = 'file_stats.py'
