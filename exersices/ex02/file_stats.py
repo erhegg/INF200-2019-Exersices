@@ -1,4 +1,8 @@
 def char_counts(textfilename):
+    """ Reads a textfile, and returns the frequency of each symbol in a list.
+    The frequency of a specific symbol in the text corresponds to the number
+    in the result list, on the place with the character code as index.
+    """
     file_string = open(textfilename).read()
     result = [0 for _ in range(256)]
     for symbol in file_string:
