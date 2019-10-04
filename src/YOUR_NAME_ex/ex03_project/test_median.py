@@ -19,7 +19,7 @@ def median(data):
     if len(data) < 1:
         raise ValueError('The list cannot be empty')
     return (sdata[n//2] if n % 2 == 1
-        else 0.5 * (sdata[n//2 - 1] + sdata[n//2]))
+            else 0.5 * (sdata[n//2 - 1] + sdata[n//2]))
 
 
 def test_single():
@@ -57,7 +57,7 @@ def test_reverse_ordered_list():
     assert median(data) == 4
 
 
-def test_unordered_elementss():
+def test_unordered_elements():
     """Test that checks that the correct median is returned for
     lists with unordered elements"""
     data = [1235634532, 3, 1, 34, 765, 87653, 0.0000005]
