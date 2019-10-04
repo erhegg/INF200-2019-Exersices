@@ -30,44 +30,54 @@ def test_single():
 
 
 def test_odd_number_elements():
+    """Test that checks that the correct median is returned for
+    lists with odd numbers of elements"""
     data = [1, 57, 2, 1, 345]
     assert median(data) == 2
 
 
 def test_even_number_elements():
+    """Test that checks that the correct median is returned for
+    lists with even numbers of elements"""
     data = [123, 43, 5, 7, 12, 0]
     assert median(data) == 0.5*(7+12)
 
 
 def test_ordered_list():
+    """Test that checks that the correct median is returned for
+    lists with ordered elements"""
     data = [1, 2, 3, 4, 5, 6, 7]
     assert median(data) == 4
 
 
 def test_reverse_ordered_list():
+    """Test that checks that the correct median is returned for
+    lists with reverse ordered elements"""
     data = [7, 6, 5, 4, 3, 2, 1]
     assert median(data) == 4
 
 
 def test_unordered_elementss():
+    """Test that checks that the correct median is returned for
+    lists with unordered elements"""
     data = [1235634532, 3, 1, 34, 765, 87653, 0.0000005]
     assert median(data) == 34
 
 
 def test_empty_list():
+    """Test that the median function raises ValueError for empty list"""
     with pytest.raises(ValueError):
         median([])
 
 
 def test_original_unchanged():
-    """
-    Test that median leaves the original data unchanged.
-    """
+    """Test that median leaves the original data unchanged"""
     data = [3, 5, 1, 24, 5, 5.0]
     median(data)
     assert data == [3, 5, 1, 24, 5, 5.0]
 
 
 def test_median_of_tuple():
+    """Test that the median function also works for tuple"""
     data = (1, 4, 2, 7)
     assert median(data) == 3
